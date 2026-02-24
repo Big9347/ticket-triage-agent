@@ -64,7 +64,7 @@ ticket-triage-agent/
 python main.py
 ```
 
-This processes all 3 sample tickets and displays triage results in the terminal.
+This processes all 3 sample tickets (data.py) and displays triage results in the terminal.
 
 ### Verbose Mode
 

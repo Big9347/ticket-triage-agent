@@ -6,20 +6,7 @@ The Support Ticket Triage Agent is a single-pass agentic pipeline that reads a s
 
 ## Architecture
 
-```
-┌──────────────┐     ┌───────────────────────┐     ┌─────────────────┐
-│  Sample      │────▶│  Agent (agent.py)      │────▶│  TriageResult   │
-│  Tickets     │     │  - System prompt       │     │  (Pydantic)     │
-│  (data.py)   │     │  - Tool-call loop      │     │                 │
-└──────────────┘     │  - JSON parsing        │     └─────────────────┘
-                     └───────┬───────┬────────┘
-                             │       │
-                    ┌────────▼┐   ┌──▼──────────────┐
-                    │ Tool 1  │   │ Tool 2           │
-                    │ Customer│   │ Knowledge Base   │
-                    │ Lookup  │   │ Search           │
-                    └─────────┘   └──────────────────┘
-```
+![workflow](workflow.png)
 
 ### Why This Design
 
